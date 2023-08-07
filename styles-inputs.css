@@ -1,0 +1,198 @@
+body,
+html {
+	background-color: var(--colorMarino);
+	margin: 0;
+}
+* {
+	font-family: 'Plus Jakarta Sans';
+}
+:root {
+	--colorAzul: #0c62af;
+	--colorGris: #757575;
+	--colorBlanquito: #f2f2f2;
+	--colorAzulClaro: #b7e5f4;
+	--colorAzulCielo: #1eb3e1;
+	--colorMarino: #00233f;
+	--colorBlancoPuro: White;
+}
+a {
+	text-decoration: none;
+}
+.tipo {
+	color: #f2f2f2;
+	font-size: 21pt;
+	font-weight: 700;
+	margin: 2rem 0;
+}
+.container {
+	margin: 2rem auto;
+	width: 800px;
+}
+/********************* MENU *************************/
+.menu {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	display: flex;
+	gap: 10px;
+	justify-content: space-between;
+}
+.menu-btn {
+	background-color: var(--colorBlanquito);
+	color: #0c62af;
+	font-weight: 600;
+	padding: 10px;
+	border-radius: 10px;
+	transition: 150ms;
+}
+.menu-btn:hover {
+	background-color: var(--colorAzulClaro);
+	color: var(--colorMarino);
+}
+.menu-btn:active {
+	transform: translate(0, 5px);
+}
+.seccion-inputs {
+	background-color: white;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	display: flex;
+	gap: 2rem;
+	box-sizing: border-box;
+	padding: 2rem;
+}
+.col-1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 75%;
+	gap: 1rem;
+}
+.col-2 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.block-input {
+	margin: 0;
+	padding: 0;
+}
+input,
+select,
+#input-lista {
+	box-sizing: border-box;
+	margin-top: 0.25rem;
+	width: 100%;
+}
+label {
+	color: var(--colorMarino);
+	font-weight: 600;
+	font-size: 1rem;
+}
+.dom-capt {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--colorAzul);
+}
+#input-lista {
+	resize: vertical;
+	width: 100%;
+	height: 200px;
+	padding: 0.25rem;
+	min-height: 200px;
+}
+#copiar-string,
+#copiar-whatsapp {
+	width: 100%;
+	height: auto;
+	color: var(--colorBlanquito);
+	background-color: #0c62af;
+	border: none;
+	font-size: 0.75rem;
+	font-weight: 600;
+	border-radius: 12px;
+	transition: 200ms;
+	padding: 0.5rem;
+}
+#copiar-whatsapp {
+	background-color: #128c7e;
+	margin-top: 1rem;
+	padding-top: 0;
+}
+#copiar-string:hover,
+#copiar-whatsapp:hover {
+	background-color: var(--colorMarino);
+	cursor: pointer;
+}
+#copiar-whatsapp:hover {
+	background-color: #075e54;
+}
+#copiar-string:active,
+#copiar-whatsapp:active {
+	transform: scale(0.95);
+}
+.botones-font {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+.btn-font {
+	width: 50px;
+	height: 30px;
+	border-radius: 10px;
+	color: white;
+	background-color: #0c62af;
+	border: none;
+	margin-right: 10px;
+	transition: 150ms;
+}
+.btn-font:hover {
+	background-color: #00233f;
+	cursor: pointer;
+}
+.btn-font:active {
+	transform: scale(0.95);
+}
+.emptyId {
+	display: none;
+}
+.fa-whatsapp {
+	color: #25d366;
+}
+p {
+	color: var(--colorGris);
+	margin: 10px 0;
+}
+#txt-index {
+	background-color: var(--colorBlanquito);
+	padding: 1rem;
+	border-radius: 10px;
+	width: auto;
+	display: inline-block;
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	transition: 200ms;
+	color: var(--colorAzul);
+	font-weight: 600;
+}
+#txt-index:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid var(--colorBlanquito);
+	color: var(--colorBlanquito);
+}
+#txt-index:active {
+	transform: translate(0, 5px);
+}
+@media (max-width: 1220px) {
+	#txt-index {
+		display: inline-block;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0 0 1rem 0;
+	}
+}

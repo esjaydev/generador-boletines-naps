@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín de Vacantes</title>
+    <link rel="stylesheet" href="./styles-boletin-area-int.css">
+    <link rel="stylesheet" href="./styles-inputs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="./index.html">
+            <p id="txt-index">Regresar al Inicio</p>
+        </a>
+        <div class="menu">
+            <a href="./area-int.html" class="menu-btn">Área / Interno</a>
+            <a href="./area-ext.html" class="menu-btn">Área / Externo</a>
+            <a href="./ciudad-int.html" class="menu-btn">Ciudad / Interno</a>
+            <a href="./region-int.html" class="menu-btn">Región / Interno</a>
+            <a href="./qualcomm-int.html" class="menu-btn">Qualcomm / Interno</a>
+            <a href="./qualcomm-ext.html" class="menu-btn">Qualcomm / Externo</a>
+        </div>
+        <!---------------------------------- Inputs -------------------------------->
+        <p class="tipo">Por Área <span style="color: #1eb3e1;">/ Interno</span></p>
+        <div class="seccion-inputs">
+            <div class="col-1">
+                <div class="block-input">
+                    <label for="area">Área</label>
+                    <select name="area" id="input-depto">
+                        <option value="">Selecciona un departamento</option>
+                        <option value="Finanzas">Finanzas</option>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="Calidad">Calidad</option>
+                        <option value="Ingenieria">Ingeniería</option>
+                        <option value="Producción">Producción</option>
+                        <option value="Aduanas">Aduanas</option>
+                        <option value="Materiales">Materiales</option>
+                        <option value="Sistemas">Sistemas / IT</option>
+                        <option value="Administrativos">Administrativos</option>
+                        <option value="Mantenimiento">Mantenimiento</option>
+                        <option value="Ventas">Ventas</option>
+                        <option value="EHS">EHS / Seguridad e Higiene</option>
+                        <option value="Legal">Legal</option>
+                    </select>
+                </div>
+                <div class="block-input">
+                    <label for="input-mes">Mes</label>
+                    <select name="input-mes" id="input-mes">
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                </div>
+                <div class="block-input">
+                    <label for="input-ubicacion">Ubicación</label>
+                    <input type="text" id="input-ubicacion">
+                </div>
+                <div class="emptyId">
+                    <label for="input-ciudad">Ciudad</label>
+                    <input type="text" id="input-ciudad">
+                </div>
+                <div class="emptyId">
+                    <label for="input-region">Región</label>
+                    <input type="text" id="input-region">
+                </div>
+                <div class="emptyId">
+                    <label for="input-reclutador">Reclutador</label>
+                    <input type="text" id="input-reclutador">
+                </div>
+                <div class="emptyId">
+                    <label for="input-contacto">Contacto</label>
+                    <input type="text" id="input-contacto">
+                </div>
+                <div class="descargar-ext">
+                    <p class="dom-capt"><a
+                            href="https://chrome.google.com/webstore/detail/dom-capture/ifldimnhajpgognpcoomiokinilgjgbl/related"
+                            target="_blank">⚠️Descarga
+                            la extensión DOM Capture</a></p>
+                    <button id="copiar-string">
+                        Copiar String para DOM Capture
+                    </button>
+                </div>
+                <div class="emptyId">
+                    <button id="copiar-whatsapp">Copiar ícono de <i class="fa fa-whatsapp" style="font-size:24px"></i>
+                        WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="col-2">
+                <div class="block-input">
+                    <label for="input-lista">Lista de Vacantes</label>
+                    <textarea id="input-lista" placeholder="Escribe o pega aquí la lista de vacantes."
+                        oninput="convertirTexto()"></textarea><br><br>
+                </div>
+                <p><strong>Tamaño de fuente en lista: </strong></p>
+                <div class="botones-font">
+                    <button class="btn-font" id="btn-dim-font">-A</button>
+                    <button class="btn-font" id="btn-aum-font">+A</button>
+                </div>
+
+            </div>
+        </div>
+        <div class="area-boletin" id="screenshot">
+            <div class="secc-preheader">
+                <p class="titulo">Boletín de Referidos</p>
+                <div class="seccion-logo">
+                    <img src="./media/naps-logo.png" alt="logo-nc" class="logo">
+                </div>
+            </div>
+            <div class="encabezado">
+                <div class="seccion-titulo">
+                    <p class="vacantesde">Vacantes en el área de <br>
+                        <span id="depto"></span>
+                    </p>
+                </div>
+                <div class="seccion-infoadicional">
+                    <div class="seccion-ubicacion">
+                        <p class="ubicacion">📍<span id="ubicacion"></span></p>
+                    </div>
+                    <div class="seccion-mes">
+                        <p class="mes">📆<span id="mes"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="listado">
+                <ul id="lista"></ul>
+            </div>
+            <div class="footer">
+                <p class="text-footer"><span id="ast">*</span></strong>Inglés avanzado requerido.<br></p>
+                <p class="text-footer2">¿Dudas? Envía mensaje a <br>
+                    <span id="correo">referidos@napsmexico.com</span>
+                </p>
+
+            </div>
+            <div class="fondo-2-footer"></div>
+        </div>
+
+        <script src="./scripts.js"></script>
+</body>
+
+</html>

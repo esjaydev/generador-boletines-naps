@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-landing.css">
+    <title>Generador de Boletines</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="./media/naps-logo-completo.png" style="width: 350px;">
+        <h1>Generador de Boletines de Vacantes</h1>
+        <h2>¿Cómo utilizar el generador de boletines? <br>
+            <span style="color: #757575; font-size: 18px;">Da click en los pasos naranja para desplegarlos.⬇️</span>
+        </h2>
+
+        <a href="javascript:hideSection(paso1)">
+            <h3 class="boton-seccion">Paso 1: Instala la extensión DOM Capture <span style="color: gray;"> / solo se
+                    realiza la primera vez.
+                </span></h3>
+        </a>
+        <div id="paso-1">
+            <img id="icon-domcapture" src="./media/icon-domcapture.jpg" alt="icono-domcapture">
+            <div class="paso1texto">
+                <p>DOM Capture es una extensión que se instala en el navegador Chrome, Microsoft Edge y todos los
+                    basados en
+                    el motor Chrome.
+                </p>
+                <p><strong>
+                        Sirve para convertir el código (en este caso el flyer) y convertirlo en una imagen que
+                        se pueda usar para publicar.
+                    </strong>
+                </p>
+            </div>
+            <a id="btn-descarga"
+                href="https://chrome.google.com/webstore/detail/dom-capture/ifldimnhajpgognpcoomiokinilgjgbl/related"
+                target="_blank">Descarga
+                DOM Capture</a>
+
+            <div class="sub-paso">
+                <p>Da click en el botón azul para instalarlo.</p>
+                <img class="img-tut" src="./media/tutorial/1.png" alt="">
+            </div>
+            <div class="sub-paso">
+                <p>Da click en Add extension / Agregar extensión.</p>
+                <img class="img-tut" src="./media/tutorial/2.png" alt="">
+            </div>
+            <div class="sub-paso">
+                <p>Da click en los 3 puntos de la esquina y después abre la opción "Extensions" <br>(Mismo paso tanto
+                    para
+                    Edge como para Google Chrome)</p>
+                <img class="img-tut" src="./media/tutorial/3.png" alt="">
+            </div>
+            <div class="sub-paso">
+                <p>Busca extensión en la ventana que aparecerá y activa el ícono de OJO del lado derecho, para fijarlo a
+                    la
+                    barra del navegador.</p>
+                <img class="img-tut" src="./media/tutorial/4.png" alt="">
+            </div>
+        </div>
+
+        <h3>Paso 2: Entra al boletín que quieras generar 👇</h3>
+        <div class="menu">
+            <a href="./area-int.html" class="menu-btn">Área / Interno</a>
+            <a href="./area-ext.html" class="menu-btn">Área / Externo</a>
+            <a href="./ciudad-int.html" class="menu-btn">Ciudad / Interno</a>
+            <a href="./region-int.html" class="menu-btn">Región / Interno</a>
+            <a href="./qualcomm-int.html" class="menu-btn">Qualcomm / Interno</a>
+            <a href="./qualcomm-ext.html" class="menu-btn">Qualcomm / Externo</a>
+        </div>
+
+        <a href="javascript:hideSection(paso3)">
+            <h3 class="boton-seccion">Paso 3: Llena el boletín.</h3>
+        </a>
+        <div id="paso-3">
+            <div class="sub-paso">
+                <p>Llena los campos que correspondan. <br>Cada boletín tiene campos diferentes, dependiendo de su uso.
+                    <br><br>
+                    Escribe / copia cada vacante por renglón, para añadir una sub-área, ciudad o zona, agrega un guión
+                    (-) al inicio del renglón para crear una sección.
+                </p>
+                <img class="img-tut" src="./media/tutorial/5.png" alt="">
+            </div>
+        </div>
+
+        <a href="javascript:hideSection(paso4)">
+            <h3 class="boton-seccion">Paso 4: Descarga la imagen con DOM Capture.</h3>
+        </a>
+        <div id="paso-4">
+            <div class="sub-paso">
+                <p>Da click en el botón azul que dice "Copiar String...". <br><br>
+                    Aparecerá una ventana encima con un aviso y se copiará automáticamente un pequeño texto.<br><br>
+                    Este botón se encuentra en todos los formatos de boletín.
+                </p>
+                <img class="img-tut" src="./media/tutorial/7.png" alt="">
+            </div>
+            <div class="sub-paso">
+                <p>Da click en el ícono azul de DOM Capture.
+                </p>
+                <img class="img-tut" src="./media/tutorial/6.png" alt="">
+            </div>
+            <div class="sub-paso">
+                <p>Aparecerá una pequeña ventana, encima del ícono, pega el texto que se copió anteriormente, ya sea con
+                    Click Derecho > Pegar, o con el atajo CTRL+V. <br><br>
+                    <strong>NOTA</strong><br>
+                    Esta parte de click en botón, copiar, pegar... solo se realiza la primera vez, después se queda
+                    guardado y directamente podemos pasar al siguiente paso. <br><br>
+                    Después da click en el botón verde "Save as Image". <br><br>
+                    Aparecerá una ventana para seleccionar la carpeta donde guardar la imagen.
+                </p>
+                <img class="img-tut" src="./media/tutorial/8.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <script src="./scripts-tutorial.js"></script>
+</body>
+
+</html>
