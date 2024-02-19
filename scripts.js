@@ -1,3 +1,14 @@
+window.onload = function () {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'navegacion.html', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById('nav').innerHTML = xhr.responseText;
+        }
+    };
+    xhr.send();
+};
+
 // Declaración de Variables
 let inputDepto = document.getElementById('input-depto')
 let inputCiudad = document.getElementById('input-ciudad')
@@ -83,7 +94,6 @@ function disminuirFont() {
     lista.style.lineHeight = lineaFont + "pt";
 }
 
-// Lista
 function convertirTexto() {
     var input = document.getElementById('input-lista');
     var lista = document.getElementById('lista');
@@ -93,6 +103,11 @@ function convertirTexto() {
 
     // Obtenemos el texto ingresado por el usuario
     var texto = input.value;
+
+    // Reemplazamos cada instancia de "\tAvanzado" con un asterisco (*)
+    texto = texto.replace(/\tAvanzado/g, '*');
+    // Reemplazamos cada instancia de "\tIntermedio", "\tBásico" y "\tNo Requerido" con un espacio vacío
+    texto = texto.replace(/\tIntermedio/g, '').replace(/\tBásico/g, '').replace(/\tNo\sRequerido/g, '');
 
     // Dividimos el texto en líneas
     var lineas = texto.split('\n');
@@ -113,3 +128,18 @@ function convertirTexto() {
         }
     });
 }
+
+// import * as htmlToImage from 'html-to-image';
+// import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
+
+// function screenshot() {
+//     htmlToImage.toJpeg(document.getElementById('screenshot'), { quality: 0.95 })
+//         .then(function (dataUrl) {
+//             var link = document.createElement('a');
+//             link.download = 'my-image-name.jpeg';
+//             link.href = dataUrl;
+//             link.click();
+//         });
+// }
+
+// document.getElementById('take-ss').addEventListener('click', screenshot)

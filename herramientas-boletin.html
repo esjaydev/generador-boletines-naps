@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazar palabras específicas seguidas de tabuladores</title>
+    <style>
+        #textInput {
+            width: 400px;
+            height: 200px;
+        }
+
+        #output {
+            padding-left: 20px;
+        }
+
+        .boletin-area {
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 5px;
+            list-style-type: none;
+            /* Elimina el bullet */
+        }
+    </style>
+</head>
+
+<body>
+
+    <textarea id="textInput" placeholder="Introduce texto..."></textarea>
+    <button id="copyButton">Copiar al Portapapeles</button>
+    <ul id="output"></ul>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const outputList = document.getElementById('output');
+        const copyButton = document.getElementById('copyButton');
+
+        textInput.addEventListener('input', () => {
+            const text = textInput.value;
+            const replacedText = text.replace(/\tIntermedio/g, '').replace(/\tBásico/g, '').replace(/\tNo\sRequerido/g, '').replace(/\tAvanzado/g, '*');
+            const lines = replacedText.split('\n');
+
+            outputList.innerHTML = ''; // Limpiar el contenido anterior
+
+            lines.forEach(line => {
+                const listItem = document.createElement('li');
+                if (line.startsWith('-')) {
+                    listItem.classList.add('boletin-area');
+                    line = line.substring(1).trim(); // Eliminar el primer carácter (el guion) y eliminar espacios en blanco al inicio y al final
+                }
+                listItem.textContent = line;
+                outputList.appendChild(listItem);
+            });
+        });
+
+        copyButton.addEventListener('click', () => {
+            const textToCopy = outputList.innerText;
+            navigator.clipboard.writeText(textToCopy)
+                .then(() => {
+                    alert('Texto copiado al portapapeles.');
+                })
+                .catch(err => {
+                    console.error('Error al copiar al portapapeles: ', err);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

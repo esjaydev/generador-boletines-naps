@@ -17,6 +17,7 @@ html {
 }
 a {
 	text-decoration: none;
+	color: rgb(129, 129, 129);
 }
 .tipo {
 	color: #f2f2f2;
@@ -35,7 +36,7 @@ a {
 	margin: 0;
 	display: flex;
 	gap: 10px;
-	justify-content: space-between;
+	justify-content: left;
 }
 .menu-btn {
 	background-color: var(--colorBlanquito);
@@ -94,7 +95,7 @@ label {
 .dom-capt {
 	font-size: 1rem;
 	font-weight: 600;
-	color: var(--colorAzul);
+	color: rgb(129, 129, 129);
 }
 #input-lista {
 	resize: vertical;

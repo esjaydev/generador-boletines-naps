@@ -76,7 +76,7 @@ p {
 	margin: 0 0 2rem 0;
 	display: flex;
 	gap: 10px;
-	justify-content: space-between;
+	justify-content: left;
 }
 .menu-btn {
 	background-color: var(--colorBlanquito);
